@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Status
 
-This project is in the **requirements phase** — no Android project code exists yet. The next step is initializing the Android project (Gradle setup, module structure, source files).
+Android project is **fully implemented** across all 6 milestones. The app compiles, all unit tests pass, and lint reports zero warnings.
 
 ## What This App Does
 
@@ -34,13 +34,26 @@ Default values: interval=60, unit=Seconds, mode=Random, sound=Digital Beep.
 
 ## Build Commands
 
-*(To be updated once the Android project is initialized.)*
+Requires `ANDROID_HOME=/home/kaju/android-sdk` (set in `gradle.properties` via `org.gradle.java.home=/home/kaju/jdk21`).
 
-Once set up, standard Android build commands will apply:
 ```bash
 ./gradlew assembleDebug        # Build debug APK
 ./gradlew assembleRelease      # Build release APK
 ./gradlew test                 # Run unit tests
 ./gradlew connectedAndroidTest # Run instrumented tests on device/emulator
-./gradlew lint                 # Run lint checks
+./gradlew lint                 # Run lint checks (currently: 0 warnings)
 ```
+
+Environment note: `ANDROID_HOME` must be set when running from a shell that doesn't inherit it:
+```bash
+ANDROID_HOME=/home/kaju/android-sdk ./gradlew assembleDebug
+```
+
+## Key Source Files
+
+| File | Purpose |
+|------|---------|
+| `app/src/main/kotlin/com/attentionbeeper/SoundSynthesizer.kt` | All 15 PCM sound generators |
+| `app/src/main/kotlin/com/attentionbeeper/SessionViewModel.kt` | Observable session state |
+| `app/src/main/kotlin/com/attentionbeeper/BeepService.kt` | Foreground service, coroutine timer loop |
+| `app/src/main/kotlin/com/attentionbeeper/MainActivity.kt` | Single-screen UI wired to service |

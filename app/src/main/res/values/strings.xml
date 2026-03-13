@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Attention Beeper</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="test_sound">Test Sound</string>
+    <string name="interval_label">Interval</string>
+    <string name="unit_label">Unit</string>
+    <string name="mode_label">Mode</string>
+    <string name="sound_label">Sound</string>
+    <string name="fixed">Fixed</string>
+    <string name="random">Random</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_running">Running</string>
+    <string name="notification_title">Attention Beeper</string>
+    <string name="notification_content">Session Running</string>
+    <string name="notification_stop">Stop</string>
+    <string name="status_indicator_description">Status indicator</string>
+    <string name="default_interval">60</string>
+    <string name="countdown_initial">00:00</string>
+    <string-array name="interval_units">
+        <item>Seconds</item>
+        <item>Minutes</item>
+    </string-array>
+    <string-array name="sound_names">
+        <item>Digital Beep</item>
+        <item>Ping</item>
+        <item>Pluck</item>
+        <item>Ding</item>
+        <item>Danger</item>
+        <item>Chime</item>
+        <item>Bell</item>
+        <item>Alert</item>
+        <item>Drop</item>
+        <item>Bubble</item>
+        <item>Woodblock</item>
+        <item>Chord</item>
+        <item>Blip</item>
+        <item>Whoosh</item>
+        <item>Click</item>
+    </string-array>
+    <string-array name="sound_ids">
+        <item>digital</item>
+        <item>ping</item>
+        <item>pluck</item>
+        <item>ding</item>
+        <item>danger</item>
+        <item>chime</item>
+        <item>bell</item>
+        <item>alert</item>
+        <item>drop</item>
+        <item>bubble</item>
+        <item>woodblock</item>
+        <item>chord</item>
+        <item>blip</item>
+        <item>whoosh</item>
+        <item>click</item>
+    </string-array>
+</resources>
